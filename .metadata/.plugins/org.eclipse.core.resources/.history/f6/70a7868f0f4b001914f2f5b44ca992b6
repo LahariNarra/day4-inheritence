@@ -1,0 +1,18 @@
+package com.capgemini.bank.model;
+
+public class CurrentBankAccount extends BankAccount {
+	private double debitLimit;
+	private double borrowedAmount;
+
+	public CurrentBankAccount() {
+		super();
+
+	}
+
+	public CurrentBankAccount(long accountId, String accountHolderName, String accountType, double accountBalance,
+			double debitLimit) {
+		super(accountId, accountHolderName, accountType, accountBalance);
+
+	}
+
+}

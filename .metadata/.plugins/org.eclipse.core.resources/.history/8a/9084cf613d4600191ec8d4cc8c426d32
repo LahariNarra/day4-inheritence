@@ -1,0 +1,13 @@
+package com.capgemini.employee.model;
+
+public class Employee {
+	private int employeeId;
+	private String employeeName;
+	private double basicSalary;
+	private double hra;
+	private double medical;
+	private double pf;
+	private double pt;
+	private double netSalary;
+	private double grossSalary;
+}

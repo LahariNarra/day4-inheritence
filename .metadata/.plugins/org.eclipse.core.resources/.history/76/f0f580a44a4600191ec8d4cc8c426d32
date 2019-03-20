@@ -1,0 +1,21 @@
+package com.capgemini.employee.model;
+
+public class Manager extends Employee {
+	private double employeePetrolAllowance;
+	private double employeeFoodAllowance;
+	private double employeeOtherAllowance;
+	public Manager() {
+		super();
+	}
+	public Manager(int employeeId, String employeeName, double employeeBasicSalary, double employeeMedical) {
+		super(employeeId, employeeName, employeeBasicSalary, employeeMedical);
+		
+	}
+	
+	
+	
+	
+
+
+
+}

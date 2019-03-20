@@ -1,0 +1,17 @@
+package com.capgemini.employee.tests;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+import com.capgemini.employee.model.MarketingExecutive;
+
+class MarketingExecutiveTest {
+
+	@Test
+	public void testToCheckObjectIsCreated() {
+		MarketingExecutive marketing = new MarketingExecutive();
+		assertNotNull(marketing);
+	}
+
+}

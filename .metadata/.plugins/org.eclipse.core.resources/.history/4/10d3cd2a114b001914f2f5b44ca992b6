@@ -1,0 +1,33 @@
+package com.capgemini.bank.tests;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.capgemini.bank.model.CurrentBankAccount;
+
+public class CurrentBankAccountTest {
+	CurrentBankAccount currentAccount;
+	
+	@Before
+	public void setUp() {
+		currentAccount = new CurrentBankAccount(101, "Lahari" ,24000,20000);
+	}
+
+	@Test
+	public void tesBankAccountIsCreatedWithDefaultConstructor() {
+		CurrentBankAccount currentAccount = new CurrentBankAccount();
+		assertNotNull(currentAccount);
+	}
+	@Test
+	public void tesBankAccountIsCreatedWithParametrizedConstructor() {
+		assertEquals(101, currentAccount.getAccountId());
+		assertEquals("Lahari", currentAccount.getAccountHolderName());
+		assertEquals(24000.0, currentAccount.getAccountBalance(), 0.01);
+		assertEquals(20000, currentAccount.getDebitLimit(),0.01);
+		
+	}
+}

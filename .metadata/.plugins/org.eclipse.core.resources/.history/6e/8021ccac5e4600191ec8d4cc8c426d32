@@ -1,0 +1,30 @@
+package com.capgemini.bank.model;
+
+public class SavingsBankAccount extends BankAccount {
+
+	private boolean salaryAccount;
+	public SavingsBankAccount() {
+		super();
+		
+	}
+
+	public SavingsBankAccount(long accountId, String accountHolderName, double accountBalance,boolean salaryAccount) {
+		super(accountId, accountHolderName,"Saving", accountBalance);
+		this.salaryAccount = salaryAccount;
+	
+	}
+	
+	public boolean isSalaryAccount(boolean salaryAccount) {
+		return true;
+	}
+
+	public boolean isSalaryAccount() {
+		return salaryAccount;
+	}
+
+	public void setSalaryAccount(boolean salaryAccount) {
+		this.salaryAccount = salaryAccount;
+	}
+
+	
+}

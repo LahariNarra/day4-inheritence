@@ -1,0 +1,26 @@
+package com.capgemini.employee.model;
+
+public class Employee {
+	/*private int employeeId;
+	private String employeeName;
+	private double employeeBasicSalary;
+	private double employeeHRA;
+	private double employeeMedical;
+	private double employeePF;
+	private double employeePT;
+	private double employeeNetSalary;
+	private double employeeGrossSalary;
+
+	public Employee() {
+		super();
+	}
+
+	public Employee(int employeeId, String employeeName, double employeeBasicSalary, double employeeMedical) {
+		super();
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		this.employeeBasicSalary = employeeBasicSalary;
+		this.employeeMedical = employeeMedical;
+	}*/
+
+}

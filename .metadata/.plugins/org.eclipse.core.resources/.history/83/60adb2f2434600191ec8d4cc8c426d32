@@ -1,0 +1,17 @@
+package com.capgemini.employee.tests;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+import com.capgemini.employee.model.Manager;
+
+class ManagerTest {
+
+	@Test
+	public void testToCheckObjectIsCreatedByDefaultConstructor() {
+		Manager manager = new Manager();
+		assertNotNull(manager);
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.capgemini.employee.test;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+import com.capgemini.employee.model.Employee;
+
+class EmployeeTest {
+
+	@Test
+	public void testToCheckObjectIsCreated() {
+		Employee employee = new Employee();
+		assertNotNull(employee);
+	}
+}
