@@ -1,7 +1,5 @@
 package com.capgemini.bank.model;
 
-import com.capgemini.bank.exception.LowBalanceException;
-
 public class BankAccount {
 	private long accountId;
 	private String accountHolderName;
@@ -53,11 +51,11 @@ public class BankAccount {
 		this.accountBalance = accountBalance;
 	}
 
-	public double withdraw(double amount) throws LowBalanceException {
+	public double withdraw(double amount)  {
 		if(accountBalance >= amount)
 			accountBalance = accountBalance - amount;
 		else
-			throw new LowBalanceException("You dont have sufficient balance");
+			System.out.println("You dont have sufficient balance");
 		return accountBalance;
 		
 	}

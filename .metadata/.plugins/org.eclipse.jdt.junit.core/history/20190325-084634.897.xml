@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CurrentBankAccountTest" project="inheritence-assignments" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0">
+    <testcase name="tesCurrentBankAccountIsCreatedWithDefaultConstructor" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="testWithdrawAmountWithCurrentBalance" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="testWithdrawAmountWithoutExtendingDebitLimt" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="tesCurrentBankAccountIsCreatedWithParametrizedConstructor" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="testDepositAmountWithBorrowedAmountLessThanZero" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="testDepositAmountWithBorrowedAmountGreaterThanZero" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="testWithdrawAmountWithExtendingDebitLimt" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+    <testcase name="testDepositAmountWithBorrowedAmountEqualToZero" classname="com.capgemini.bank.tests.CurrentBankAccountTest" time="0.0"/>
+  </testsuite>
+</testrun>

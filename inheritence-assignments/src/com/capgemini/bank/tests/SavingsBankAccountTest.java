@@ -8,7 +8,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.capgemini.bank.exception.LowBalanceException;
 import com.capgemini.bank.model.SavingsBankAccount;
 
 
@@ -21,12 +20,12 @@ public class SavingsBankAccountTest {
 	}
 
 	@Test
-	public void tesBankAccountIsCreatedWithDefaultConstructor() {
+	public void testSavingBankAccountIsCreatedWithDefaultConstructor() {
 		SavingsBankAccount savingsAccount = new SavingsBankAccount();
 		assertNotNull(savingsAccount);
 	}
 	@Test
-	public void tesBankAccountIsCreatedWithParametrizedConstructor() {
+	public void testSavingBankAccountIsCreatedWithParametrizedConstructor() {
 		assertEquals(101, savingsAccount.getAccountId());
 		assertEquals("Lahari", savingsAccount.getAccountHolderName());
 		assertEquals(24000.0, savingsAccount.getAccountBalance(), 0.01);
@@ -35,7 +34,7 @@ public class SavingsBankAccountTest {
 	}
 	
 	@Test
-	public void tesBankAccountIsCreatedWithParametrizedConstructorSavedAccountFalse() {
+	public void testSavingBankAccountIsCreatedWithParametrizedConstructorSavedAccountFalse() {
 		SavingsBankAccount savingsAccount = new SavingsBankAccount(101, "Lahari" ,24000,false);
 		assertEquals(101, savingsAccount.getAccountId());
 		assertEquals("Lahari", savingsAccount.getAccountHolderName());
@@ -44,27 +43,27 @@ public class SavingsBankAccountTest {
 		
 	}
 	@Test
-	public void testWithdrawSalaryAccountWithSufficientFund() throws LowBalanceException {
-		savingsAccount.withdraw(5000);
-		assertEquals(19000, savingsAccount.getAccountBalance(),0.01);
+	public void testWithdrawSalaryAccountWithSufficientFund()  {
+		savingsAccount.withdraw(23000);
+		assertEquals(1000, savingsAccount.getAccountBalance(),0.01);
 	}
 	
-	@Test(expected = LowBalanceException.class)
-	public void testWithdrawSalaryAccountWithInSufficientFund() throws LowBalanceException {
+	@Test
+	public void testWithdrawSalaryAccountWithInSufficientFund()  {
 		savingsAccount.withdraw(25000);
 		
 	}
 	@Test
-	public void testWithdrawWithSalaryAccountWithSufficientFund() throws LowBalanceException {
+	public void testWithdrawWithoutSalaryAccountWithSufficientFund()  {
 		SavingsBankAccount savingsAccount = new SavingsBankAccount(101, "Lahari" ,24000,false);
 		savingsAccount.withdraw(5000);
 		assertEquals(19000, savingsAccount.getAccountBalance(),0.01);
 	}
 	
-	@Test(expected = LowBalanceException.class)
-	public void testWithdrawWithoutSalaryAccountWithInSufficientFund() throws LowBalanceException {
+	@Test
+	public void testWithdrawWithoutSalaryAccountWithInSufficientFund()  {
 		SavingsBankAccount savingsAccount = new SavingsBankAccount(101, "Lahari" ,24000,false);
-		savingsAccount.withdraw(18000);
+		savingsAccount.withdraw(20000);
 		
 	}
 

@@ -1,11 +1,9 @@
 package com.capgemini.bank.model;
 
-import com.capgemini.bank.exception.LowBalanceException;
-
 public class SavingsBankAccount extends BankAccount {
 
 	private boolean salaryAccount;
-	public static final double MINIMUM_BALANCE = 10000;
+	public static final double MINIMUM_BALANCE = 5000;
 	
 	
 	public SavingsBankAccount() {
@@ -30,7 +28,7 @@ public class SavingsBankAccount extends BankAccount {
 		this.salaryAccount = salaryAccount;
 	}
 	@Override
-	public double withdraw(double amount) throws LowBalanceException {
+	public double withdraw(double amount)  {
 		if(salaryAccount) {
 			return super.withdraw(amount);
 		}
@@ -38,7 +36,7 @@ public class SavingsBankAccount extends BankAccount {
 			if(getAccountBalance() - amount >= MINIMUM_BALANCE)
 				setAccountBalance(getAccountBalance() - amount); 
 			else
-				throw new LowBalanceException("You dont have sufficient balance");
+				System.out.println("You dont have sufficient balance");
 			return getAccountBalance();
 		}
 	}

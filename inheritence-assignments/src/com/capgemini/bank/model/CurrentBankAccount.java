@@ -1,7 +1,5 @@
 package com.capgemini.bank.model;
 
-import com.capgemini.bank.exception.LowBalanceException;
-
 public class CurrentBankAccount extends BankAccount {
 	private double debitLimit;
 	private double borrowedAmount;
@@ -34,15 +32,15 @@ public class CurrentBankAccount extends BankAccount {
 	}
 
 	@Override
-	public double withdraw(double amount) throws LowBalanceException {
-		double temp = getAccountBalance() - amount;
-		if (temp > 0)
-			setAccountBalance(temp);
-		else if (Math.abs(temp) <= (debitLimit - borrowedAmount)) {
+	public double withdraw(double amount)   {
+		double balance = getAccountBalance() - amount;
+		if (balance > 0)
+			setAccountBalance(balance);
+		else if (Math.abs(balance) <= (debitLimit - borrowedAmount)) {
 			setAccountBalance(0);
-			borrowedAmount = borrowedAmount + Math.abs(temp);
+			borrowedAmount = borrowedAmount + Math.abs(balance);
 		} else
-			throw new LowBalanceException("You have exceeded with debit limit");
+			System.out.println("You have exceeded with debit limit");
 		return getAccountBalance();
 	}
 

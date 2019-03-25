@@ -6,7 +6,6 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.capgemini.bank.exception.LowBalanceException;
 import com.capgemini.bank.model.BankAccount;
 
 public class BankAccountTest {
@@ -40,22 +39,21 @@ public class BankAccountTest {
 	}
 
 	@Test
-	public void testWithdrawWithSufficientFund() throws LowBalanceException {
+	public void testWithdrawWithSufficientFund() {
 		account.withdraw(5000);
-		assertEquals(19000, account.getAccountBalance(),0.01);
+		assertEquals(19000, account.getAccountBalance(), 0.01);
 	}
-	
-	@Test(expected = LowBalanceException.class)
-	public void testWithdrawWithInSufficientFund() throws LowBalanceException {
+
+	@Test
+	public void testWithdrawWithInSufficientFund() {
 		account.withdraw(25000);
-		
+
 	}
-	
+
 	@Test
 	public void testDeposit() {
 		account.deposit(10000);
-		assertEquals(34000, account.getAccountBalance(),0.01);
-		
+		assertEquals(34000, account.getAccountBalance(), 0.01);
+
 	}
 }
-

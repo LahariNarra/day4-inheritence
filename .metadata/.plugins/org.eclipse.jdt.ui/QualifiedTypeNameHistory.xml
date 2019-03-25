@@ -7,8 +7,8 @@
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="com.capgemini.employee.model.Employee"/>
 <fullyQualifiedTypeName name="com.capgemini.employee.model.Manager"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="com.capgemini.employee.tests.MarketingExecutiveTest"/>
-<fullyQualifiedTypeName name="com.capgemini.bank.model.BankAccount"/>
 <fullyQualifiedTypeName name="com.capgemini.bank.exception.LowBalanceException"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.capgemini.bank.model.BankAccount"/>
 </qualifiedTypeNameHistroy>

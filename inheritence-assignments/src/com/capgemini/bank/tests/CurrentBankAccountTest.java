@@ -6,7 +6,6 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.capgemini.bank.exception.LowBalanceException;
 import com.capgemini.bank.model.CurrentBankAccount;
 
 public class CurrentBankAccountTest {
@@ -18,13 +17,13 @@ public class CurrentBankAccountTest {
 	}
 
 	@Test
-	public void tesBankAccountIsCreatedWithDefaultConstructor() {
+	public void tesCurrentBankAccountIsCreatedWithDefaultConstructor() {
 		CurrentBankAccount currentAccount = new CurrentBankAccount();
 		assertNotNull(currentAccount);
 	}
 
 	@Test
-	public void tesBankAccountIsCreatedWithParametrizedConstructor() {
+	public void tesCurrentBankAccountIsCreatedWithParametrizedConstructor() {
 		assertEquals(101, currentAccount.getAccountId());
 		assertEquals("Lahari", currentAccount.getAccountHolderName());
 		assertEquals(24000.0, currentAccount.getAccountBalance(), 0.01);
@@ -32,36 +31,36 @@ public class CurrentBankAccountTest {
 
 	}
 	@Test
-	public void testWithdrawAmountWithCurrentBalance() throws LowBalanceException {
+	public void testWithdrawAmountWithCurrentBalance()  {
 		currentAccount.withdraw(24000);
 		assertEquals(0, currentAccount.getAccountBalance(),0.01);
 	}
 	@Test
-	public void testWithdrawAmountWithoutExtendingDebitLimt() throws LowBalanceException {
+	public void testWithdrawAmountWithoutExtendingDebitLimt()  {
 		currentAccount.withdraw(34000);
 		assertEquals(0, currentAccount.getAccountBalance(),0.01);
 	}
 	
-	@Test(expected = LowBalanceException.class)
-	public void testWithdrawAmountWithExtendingDebitLimt() throws LowBalanceException {
+	@Test
+	public void testWithdrawAmountWithExtendingDebitLimt()  {
 		currentAccount.withdraw(55000);
 		
 	}
 	@Test
-	public void testDepositAmountWithBorrowedAmountGreaterThanZero() throws LowBalanceException {
+	public void testDepositAmountWithBorrowedAmountGreaterThanZero()  {
 		currentAccount.withdraw(20000);
 		currentAccount.deposit(25000);
 		assertEquals(29000, currentAccount.getAccountBalance(),0.01);
 	}
 	
 	@Test
-	public void testDepositAmountWithBorrowedAmountEqualToZero() throws LowBalanceException {
+	public void testDepositAmountWithBorrowedAmountEqualToZero()  {
 		currentAccount.withdraw(24000);
 		currentAccount.deposit(25000);
 		assertEquals(25000, currentAccount.getAccountBalance(),0.01);
 	}
 	@Test
-	public void testDepositAmountWithBorrowedAmountLessThanZero() throws LowBalanceException {
+	public void testDepositAmountWithBorrowedAmountLessThanZero()  {
 		currentAccount.withdraw(34000);
 		currentAccount.deposit(25000);
 		assertEquals(15000, currentAccount.getAccountBalance(),0.01);
