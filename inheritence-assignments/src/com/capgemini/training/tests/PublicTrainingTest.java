@@ -1,0 +1,32 @@
+package com.capgemini.training.tests;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
+import com.capgemini.training.model.PublicTraining;
+
+public class PublicTrainingTest {
+
+	@Test
+	public void testToCheckObjectIsCreatedWithDefaultConstructor() {
+		PublicTraining publicTraining = new PublicTraining();
+		assertNotNull(publicTraining);
+	}
+	
+	@Test
+	public void testToCheckObjectIsCreatedWithDParameterizedConstructor() {
+		PublicTraining publicTraining = new PublicTraining(1748,"Java",5000,50);
+		assertEquals(1748, publicTraining.getId());
+		assertEquals("Java", publicTraining.getName());
+		assertEquals(5000, publicTraining.getFees(),0.01);
+		assertEquals(50,publicTraining.getParticipants());
+	}
+	
+	@Test
+	public void testToCheckOrderValue() {
+		PublicTraining publicTraining = new PublicTraining(1748,"Java",5000,50);
+		assertEquals(250000, publicTraining.getOrderValue(),0.01);
+	}
+}

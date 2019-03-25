@@ -1,0 +1,32 @@
+package com.capgemini.training.tests;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.capgemini.training.model.CorporateTraining;
+
+public class CorporateTrainingTest {
+
+	@Test
+	public void testToCheckObjectIsCreatedWithDefaultConstructor() {
+		CorporateTraining corporateTraining = new CorporateTraining();
+		assertNotNull(corporateTraining);
+	}
+	@Test
+	public void testToCheckObjectIsCreatedWithDParameterizedConstructor() {
+		CorporateTraining corporateTraining = new CorporateTraining(1748,"Big Data",35000,4);
+		assertEquals(1748, corporateTraining.getId());
+		assertEquals("Big Data", corporateTraining.getName());
+		assertEquals(35000, corporateTraining.getFees(),0.01);
+		assertEquals(4,corporateTraining.getDays());
+	}
+	
+	@Test
+	public void testToCheckOrderValue() {
+		CorporateTraining corporateTraining = new CorporateTraining(1748,"Big Data",35000,4);
+		assertEquals(140000, corporateTraining.getOrderValue(),0.01);
+	}
+
+}

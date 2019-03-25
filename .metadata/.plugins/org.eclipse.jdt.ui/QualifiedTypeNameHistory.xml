@@ -11,4 +11,5 @@
 <fullyQualifiedTypeName name="com.capgemini.bank.exception.LowBalanceException"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="com.capgemini.bank.model.BankAccount"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
