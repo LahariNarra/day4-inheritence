@@ -1,0 +1,17 @@
+package com.capgemini.training.tests;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.jupiter.api.Test;
+
+import com.capgemini.training.model.CorporateTraining;
+
+public class CorporateTrainingTest {
+
+	@Test
+	public void testToCheckObjectIsCreatedWithDefaultConstructor() {
+		CorporateTraining corporateTraining = new CorporateTraining();
+		assertNotNull(corporateTraining);
+	}
+
+}

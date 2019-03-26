@@ -1,0 +1,14 @@
+package com.capgemini.training.tests;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CorporateTrainingTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

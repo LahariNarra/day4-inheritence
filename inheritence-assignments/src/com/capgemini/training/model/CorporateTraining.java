@@ -21,6 +21,7 @@ public class CorporateTraining extends Training {
 	public void setDays(int days) {
 		this.days = days;
 	}
+	@Override
 	public double getOrderValue() {
 		return getFees()*days;
 	}

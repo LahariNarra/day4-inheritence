@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PublicTrainingTest" project="inheritence-assignments" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.capgemini.training.tests.PublicTrainingTest" time="0.068">
+    <testcase name="testToCheckOrderValue" classname="com.capgemini.training.tests.PublicTrainingTest" time="0.067"/>
+    <testcase name="testToCheckObjectIsCreatedWithDParameterizedConstructor" classname="com.capgemini.training.tests.PublicTrainingTest" time="0.0"/>
+    <testcase name="testToCheckObjectIsCreatedWithDefaultConstructor" classname="com.capgemini.training.tests.PublicTrainingTest" time="0.001"/>
+  </testsuite>
+</testrun>

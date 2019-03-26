@@ -1,6 +1,6 @@
 package com.capgemini.training.model;
 
-public class Training {
+public abstract class Training {
 	private int id;
 	private String name;
 	private double fees;
@@ -39,5 +39,12 @@ public class Training {
 	public void setFees(double fees) {
 		this.fees = fees;
 	}
+	public abstract double getOrderValue();
+
+	@Override
+	public String toString() {
+		return "Training [id=" + id + ", name=" + name + ", fees=" + fees + "]";
+	}
+	
 
 }

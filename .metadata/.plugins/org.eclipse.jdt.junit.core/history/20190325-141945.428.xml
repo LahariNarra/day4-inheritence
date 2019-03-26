@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CorporateTrainingTest" project="inheritence-assignments" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.capgemini.training.tests.CorporateTrainingTest" time="0.021" displayname="CorporateTrainingTest" uniqueid="[engine:junit-jupiter]/[class:com.capgemini.training.tests.CorporateTrainingTest]">
+    <testcase name="testToCheckOrderValue" classname="com.capgemini.training.tests.CorporateTrainingTest" time="0.007" displayname="testToCheckOrderValue()" uniqueid="[engine:junit-jupiter]/[class:com.capgemini.training.tests.CorporateTrainingTest]/[method:testToCheckOrderValue()]"/>
+    <testcase name="testToCheckObjectIsCreatedWithDParameterizedConstructor" classname="com.capgemini.training.tests.CorporateTrainingTest" time="0.002" displayname="testToCheckObjectIsCreatedWithDParameterizedConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.capgemini.training.tests.CorporateTrainingTest]/[method:testToCheckObjectIsCreatedWithDParameterizedConstructor()]"/>
+    <testcase name="testToCheckObjectIsCreatedWithDefaultConstructor" classname="com.capgemini.training.tests.CorporateTrainingTest" time="0.012" displayname="testToCheckObjectIsCreatedWithDefaultConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.capgemini.training.tests.CorporateTrainingTest]/[method:testToCheckObjectIsCreatedWithDefaultConstructor()]"/>
+  </testsuite>
+</testrun>

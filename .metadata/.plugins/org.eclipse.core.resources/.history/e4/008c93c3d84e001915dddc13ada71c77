@@ -1,0 +1,16 @@
+package com.capgemini.training.tests;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+import com.capgemini.training.model.PublicTraining;
+
+class PublicTrainingTest {
+
+	@Test
+	public void testToCheckObjectIsCreatedWithDefaultConstructor() {
+		PublicTraining publicTraining = new PublicTraining();
+		assertNotNull(publicTraining);
+	}
+}

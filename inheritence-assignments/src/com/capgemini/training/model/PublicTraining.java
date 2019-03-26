@@ -21,7 +21,7 @@ public class PublicTraining extends Training{
 	public void setParticipants(int participants) {
 		this.participants = participants;
 	}
-	
+	@Override
 	public double getOrderValue() {
 		return getFees()*participants;
 	}
